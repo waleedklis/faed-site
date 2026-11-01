@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>فائض · المنتدى | Faed · Forum</title>
+<meta name="description" content="منتدى مستخدمي تطبيق فائض: أسئلة، اقتراحات، ومشاركة صيغ رسائل البنوك.">
+<style>
+:root{--bg:#F3F6FB;--card:#fff;--ink:#0F172A;--mut:#57637A;--acc:#0B8F86;--line:#D5DEEA;--soft:#E6F4F2}
+@media (prefers-color-scheme:dark){:root{--bg:#070C1F;--card:#0E1730;--ink:#EEF1F8;--mut:#8A96B3;--acc:#2FD3C4;--line:#1C2A4D;--soft:#0F2A2A}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,"Noto Sans Arabic",Tahoma,sans-serif}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:22px;text-decoration:none;color:var(--ink)}.brand b{color:var(--acc)}
+nav.site{display:flex;gap:6px;flex-wrap:wrap}nav.site a{text-decoration:none;color:var(--mut);padding:8px 12px;border-radius:12px;border:1px solid var(--line);font-size:14px}nav.site a.on,nav.site a:hover{color:var(--acc);border-color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:16px}
+h1{font-size:28px;margin:0 0 6px}h2{font-size:18px;margin:0 0 8px;color:var(--acc)}
+p,li{color:var(--ink)}.mut{color:var(--mut);font-size:14px}ul{padding-inline-start:22px;margin:6px 0}
+a{color:var(--acc)}
+.rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.rules div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.rules b{display:block;margin-bottom:2px}
+.tip{background:var(--soft);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:14.5px}
+.giscus{margin-top:6px}
+footer{color:var(--mut);font-size:13.5px;text-align:center;margin-top:24px}
+[lang=en]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+  <a class="brand" href="/">فائض <b>·</b> Faed</a>
+  <nav class="site"><a href="/">الرئيسية</a><a href="/guides/">الأدلة</a><a class="on" href="/forum/">المنتدى</a><a href="/privacy/">الخصوصية</a></nav>
+</div>
+
+<section class="card">
+<h1>منتدى «فائض»</h1>
+<p class="mut">اسأل، اقترح، أبلغ عن مشكلة، أو شارك صيغة رسالة بنك جديدة. القراءة متاحة للجميع، والكتابة تحتاج حساباً على GitHub، وهو مجاني ويُنشأ في دقيقة.</p>
+<div class="rules">
+  <div><b>قبل أن تسأل</b>راجع <a href="/guides/">الأدلة</a>، فأغلب الأسئلة مشروحة هناك.</div>
+  <div><b>لا تنشر أرقاماً</b>احذف أرقام البطاقات والحسابات والجوالات وأسماء الأشخاص من أي رسالة تلصقها.</div>
+  <div><b>مشكلة في قراءة رسالة؟</b>الأسرع زر «القراءة خاطئة؟ أبلغنا» داخل التطبيق، فهو يُخفي الأرقام تلقائياً.</div>
+  <div><b>اقتراح ميزة</b>اذكر المشكلة التي تحلّها لك، لا الحل فقط. هذا يساعدنا نفهم الحاجة.</div>
+</div>
+<div class="tip">النقاشات مخزّنة في GitHub Discussions وتظهر هنا مباشرة. تستطيع أيضاً فتحها من <a id="ghlink" href="#" target="_blank" rel="noopener">صفحة النقاشات على GitHub</a>.</div>
+</section>
+
+<section class="card" id="discussions">
+<h2>النقاشات</h2>
+<div class="giscus"></div>
+<noscript><p class="mut">يحتاج عرض النقاشات إلى تفعيل جافاسكربت.</p></noscript>
+</section>
+
+<footer>فائض · <a href="mailto:support@faed.app">support@faed.app</a> · <a href="/guides/">الأدلة</a> · <a href="/privacy/">الخصوصية</a><br><span lang="en">Faed · community forum powered by GitHub Discussions</span></footer>
+</main>
+<script>
+// giscus: discussions live in the GitHub repo below. The ids come from https://giscus.app after enabling Discussions on the repo.
+var GISCUS={repo:'waleedklis/faed-site',repoId:'R_kgDOVZCEQw',category:'General',categoryId:'DIC_kwDOVZCEQ84DKJmp'};
+document.getElementById('ghlink').href='https://github.com/'+GISCUS.repo+'/discussions';
+var s=document.createElement('script');s.src='https://giscus.app/client.js';s.async=true;s.crossOrigin='anonymous';
+var dark=matchMedia('(prefers-color-scheme: dark)').matches;
+var a={'data-repo':GISCUS.repo,'data-repo-id':GISCUS.repoId,'data-category':GISCUS.category,'data-category-id':GISCUS.categoryId,'data-mapping':'specific','data-term':'منتدى فائض','data-strict':'0','data-reactions-enabled':'1','data-emit-metadata':'0','data-input-position':'top','data-theme':dark?'dark_dimmed':'light','data-lang':'ar','data-loading':'lazy'};
+for(var k in a)s.setAttribute(k,a[k]);
+document.querySelector('.giscus').appendChild(s);
+</script>
+</body>
+</html>
