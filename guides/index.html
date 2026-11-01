@@ -28,6 +28,288 @@ kbd{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:
 details{border-top:1px solid var(--line);padding:10px 0}details summary{cursor:pointer;font-weight:600}details:last-child{border-bottom:1px solid var(--line)}
 footer{color:var(--mut);font-size:13.5px;text-align:center;margin-top:24px}
 [lang=en]{direction:ltr;text-align:left}
+
+.flow{display:grid;gap:8px;margin-top:12px}
+.flow .lbl{font-size:13px;color:var(--mut);margin-bottom:6px;font-weight:600}
+.arrow{text-align:center;color:var(--acc);font-size:22px;line-height:1}
+.sms{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:12px 14px;max-width:430px}
+.sms .from{font-size:12.5px;color:var(--mut);margin-bottom:4px}
+.sms .body{font-size:14.5px;line-height:1.9}
+.fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.fields div{background:var(--soft);border-radius:12px;padding:8px 12px;font-size:14.5px;font-weight:600}
+.fields b{display:block;color:var(--mut);font-weight:600;font-size:12px}
+.phone{max-width:300px;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:14px 14px 16px;box-shadow:0 10px 28px rgba(15,23,42,.10)}
+.ph-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mut);margin-bottom:6px}
+.ring{width:138px;height:138px;border-radius:50%;margin:6px auto 12px;display:grid;place-items:center;background:conic-gradient(var(--acc) 0 62%,var(--line) 62%)}
+.ring i{width:112px;height:112px;border-radius:50%;background:var(--card);display:grid;place-items:center;align-content:center;text-align:center;font-style:normal;line-height:1.35}
+.ring i b{display:block;font-size:23px}
+.ring i span{font-size:11.5px;color:var(--mut)}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:5px 0 12px}
+.bar i{display:block;height:100%;background:var(--acc);border-radius:99px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:14.5px}
+.row small{display:block;color:var(--mut);font-size:12px;font-weight:400}
+.row b{white-space:nowrap}
+.row .nm{font-weight:600}
+.pos{color:var(--acc)}
+.chat{display:grid;gap:8px;max-width:430px}
+.chat div{padding:9px 13px;border-radius:16px;font-size:14.5px}
+.chat .q{background:var(--soft)}
+.chat .a{background:var(--bg);border:1px solid var(--line)}
+figure{margin:14px 0 0}figcaption{color:var(--mut);font-size:13px;margin-top:8px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:start}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+  <a class="brand" href="/">فائض <b>·</b> Faed</a>
+  <nav class="site"><a href="/">الرئيسية</a><a class="on" href="/guides/">الأدلة</a><a href="/forum/">المنتدى</a><a href="/privacy/">الخصوصية</a><a class="lang" href="/en/guides/" lang="en" dir="ltr">English</a></nav>
+</div>
+
+<section class="card">
+<h1>أدلة استخدام «فائض»</h1>
+<p class="mut">كل ما تحتاجه لتبدأ وتفهم الأرقام. التطبيق يعمل داخل جوالك فقط ولا يتصل بالإنترنت.</p>
+<div class="toc">
+  <a href="#how">مثال سريع<span>من رسالة البنك إلى الرقم</span></a>
+  <a href="#start">١. البدء في ثلاث خطوات<span>التثبيت، الراتب، إذن الرسائل</span></a>
+  <a href="#banks">٢. البنوك والمحافظ<span>من يُقرأ ومن لا يُقرأ</span></a>
+  <a href="#home">٣. فهم الشاشة الرئيسية<span>المصروف، المتبقي، الصرف اليومي</span></a>
+  <a href="#cats">٤. التصنيفات<span>بين حساباتي، أمانة، المرتجعات</span></a>
+  <a href="#cash">٥. الكاش والصراف<span>السحب والإيداع</span></a>
+  <a href="#balance">٦. الرصيد<span>لماذا يختلف عن البنك</span></a>
+  <a href="#fx">٧. الشراء بعملة أجنبية<span>الدولار وعملات الخليج</span></a>
+  <a href="#simple">٨. الوضع المبسّط<span>ملخص فقط</span></a>
+  <a href="#backup">٩. النسخ الاحتياطي<span>النقل بين الأجهزة</span></a>
+  <a href="#privacy">١٠. الخصوصية<span>ما الذي يقرؤه التطبيق</span></a>
+  <a href="#faq">١١. أسئلة شائعة<span>مشاكل وحلول</span></a>
+</div>
+</section>
+
+<section class="card" id="how">
+<h2>مثال سريع: من رسالة البنك إلى رقم تفهمه</h2>
+<p class="mut">هذه هي فكرة التطبيق كاملة في ثلاث خطوات. كل ما تراه هنا يحدث داخل جوالك، بدون إنترنت وبدون ربط بالبنك.</p>
+
+<div class="flow">
+  <div>
+    <div class="lbl">١ · الرسالة كما تصلك من البنك</div>
+    <div class="sms">
+      <div class="from">AlRajhiBank</div>
+      <div class="body">شراء عبر نقاط البيع<br>بطاقة: مدى ****٤٤١٨<br>مبلغ: ٨٦٫٥٠ ر.س<br>لدى: TAMIMI MARKETS<br>في: ١٨/١٠/٢٦ ٢٠:٠٤<br>الرصيد: ٤٬٣١٢٫٧٥ ر.س</div>
+    </div>
+  </div>
+  <div class="arrow">↓</div>
+  <div>
+    <div class="lbl">٢ · ما يستخرجه فائض من الرسالة</div>
+    <div class="fields">
+      <div><b>المبلغ</b>٨٦٫٥٠ ر.س</div>
+      <div><b>المتجر</b>أسواق التميمي</div>
+      <div><b>التصنيف</b>بقالة</div>
+      <div><b>البطاقة</b>الراجحي ····٤٤١٨</div>
+      <div><b>الوقت</b>١٨ أكتوبر، ٢٠:٠٤</div>
+      <div><b>الرصيد بعدها</b>٤٬٣١٢٫٧٥ ر.س</div>
+    </div>
+  </div>
+  <div class="arrow">↓</div>
+  <div>
+    <div class="lbl">٣ · ما تراه في الشاشة الرئيسية</div>
+    <div class="phone">
+      <div class="ph-top"><span>أكتوبر</span><span>٤٬٣١٢٫٧٥ ر.س</span></div>
+      <div class="ring"><i><b>١٤٨ ر.س</b><span>تقدر تصرف اليوم</span></i></div>
+      <div style="font-size:13.5px;color:var(--mut)">مصروف الشهر ٥٬٦٨٨ من ٩٬٠٠٠</div>
+      <div class="bar"><i style="width:63%"></i></div>
+      <div class="row"><span class="nm">أسواق التميمي<small>بقالة · قبل دقيقة</small></span><b>٨٦٫٥٠</b></div>
+      <div class="row"><span class="nm">محطة وقود<small>مواصلات · أمس</small></span><b>١٢٠٫٠٠</b></div>
+      <div class="row"><span class="nm">استرجاع متجر<small>مرتجع · الأحد</small></span><b class="pos">+٢٤٩٫٠٠</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="tip">الرقم الكبير ليس رصيدك، بل <b>ما تقدر تصرفه اليوم</b> لو أردت أن يكفيك المبلغ إلى نهاية الشهر: المتبقي من ميزانيتك مقسومًا على الأيام الباقية.</div>
+</section>
+
+<section class="card" id="ex2">
+<h2>أمثلة أخرى على ما يفعله التطبيق</h2>
+
+<div class="two">
+<figure>
+  <div class="phone">
+    <div class="ph-top"><span>التصنيفات</span><span>أكتوبر</span></div>
+    <div style="font-size:13.5px">بقالة <b style="float:left">١٬٤٤٠ / ١٬٥٠٠</b></div>
+    <div class="bar"><i style="width:96%"></i></div>
+    <div style="font-size:13.5px">مطاعم <b style="float:left">٧٩٠ / ٩٠٠</b></div>
+    <div class="bar"><i style="width:88%"></i></div>
+    <div style="font-size:13.5px">مواصلات <b style="float:left">٤٢٠ / ٨٠٠</b></div>
+    <div class="bar"><i style="width:52%"></i></div>
+    <div style="font-size:13.5px">فواتير واشتراكات <b style="float:left">٦٣٥ / ٧٠٠</b></div>
+    <div class="bar"><i style="width:91%"></i></div>
+  </div>
+  <figcaption>التصنيف يحدث تلقائيًا من اسم المتجر، وتضع لكل تصنيف ميزانية. الشريط يقترب من النهاية قبل أن تتجاوزها.</figcaption>
+</figure>
+
+<figure>
+  <div class="chat">
+    <div class="q">كم صرفت على المطاعم هذا الشهر؟</div>
+    <div class="a">صرفت <b>٧٩٠٫٢٥ ر.س</b> على المطاعم في أكتوبر، في ١٤ عملية. أعلى عملية ١٤٥ ر.س يوم ١٢ أكتوبر. هذا أقل بـ ١١٠ ر.س من سبتمبر.</div>
+    <div class="q">وكم بقي لي اليوم؟</div>
+    <div class="a">متبقٍ لك <b>١٤٨ ر.س</b> لليوم، و ٣٬٣١٢ ر.س حتى نهاية الشهر.</div>
+  </div>
+  <figcaption>«اسأل فائض» يجيب من سجلك أنت داخل الجوال — لا يُرسل سؤالك إلى أي خادم.</figcaption>
+</figure>
+</div>
+
+<h3>مثال: الرسالة التي لا تُحسب مصروفًا</h3>
+<div class="sms" style="margin-top:8px">
+  <div class="from">SNB-AlAhli</div>
+  <div class="body">تحويل صادر<br>مبلغ: ٥٠٠٫٠٠ ر.س<br>إلى: حسابك الآخر ****٩٠٢<br>في: ١٥/١٠/٢٦</div>
+</div>
+<p>هذا تحويل <b>بين حساباتك</b>، فيضعه فائض في تصنيف «بين حساباتي» ولا يحتسبه مصروفًا — وإلا لظهر مالك وكأنه نقص مرتين. وبالمثل: المبلغ الذي تستلمه من شخص لتدفعه عنه يوضع في «أمانة (ليس مالي)»، والاسترجاع من متجر يُخصم من المصروف ولا يُحسب دخلًا.</p>
+</section>
+
+<section class="card" id="start">
+<h2>١. البدء في ثلاث خطوات</h2>
+<ol>
+<li><b>اللغة والاسم.</b> اختر العربية أو الإنجليزية، واكتب اسمك الأول إن أردت أن يظهر في التحية.</li>
+<li><b>راتبك تقريباً.</b> رقم تقريبي يكفي. منه يحسب التطبيق كم تقدر تصرف في اليوم، ويبدأ شهرك المالي يوم نزول الراتب تلقائياً، ويتعرف على بنك الراتب من رسائلك. إن لم يكن لك راتب ثابت اضغط «تخطَّ».</li>
+<li><b>رسائل البنوك.</b> اقرأ الإفصاح ووافق عليه، ثم اسمح بقراءة الرسائل، واختر البنوك والمحافظ التي تريد قراءتها. اضغط «ابدأ».</li>
+</ol>
+<div class="tip">في أول أسبوع يعرض التطبيق الأرقام فقط بلا ملاحظات، ثم تظهر الملاحظات تدريجياً كلما عرفك أكثر.</div>
+<h3>إذا ثبّت التطبيق من ملف خارج المتجر</h3>
+<p>قد يرفض أندرويد إعطاء إذن الرسائل. افتح <kbd>إعدادات التطبيق بالهاتف</kbd> ← النقاط الثلاث ← <kbd>السماح بالإعدادات المقيّدة</kbd>، ثم أعد طلب الإذن.</p>
+</section>
+
+<section class="card" id="banks">
+<h2>٢. البنوك والمحافظ</h2>
+<p>يقرأ «فائض» رسائل <b>البنوك والمحافظ المرخّصة فقط</b>: الراجحي، والأهلي، والإنماء، والرياض، والأول، والبلاد، والجزيرة، والفرنسي، والعربي، والاستثمار، وفيجن، وD360، وبنك STC، وstc pay، ويور باي، وبرق، وتيقمو، وميم، وموبايلي باي، وغيرها.</p>
+<ul>
+<li>المرسلون الإعلانيون، مثل الأسماء التي تنتهي بـ«AD» أو «Offers»، لا تُقرأ أبداً حتى لو كانت من بنك.</li>
+<li>المتاجر وشركات الاتصالات والجهات الحكومية وشركات التأمين لا تُقرأ. تظهر باهتة في الإعدادات تحت «مرسلون آخرون».</li>
+<li>رموز التحقق ورسائل الترحيب وحدود العمليات وإشعارات الرفض لا تُحسب عمليات.</li>
+</ul>
+<h3>بنكي غير موجود</h3>
+<p>أرسل لنا اسم المرسل كما يظهر في تطبيق الرسائل من <kbd>الإعدادات ← أرسل ملاحظتك</kbd>، أو شارك عينات مقنّعة من <kbd>الإعدادات المتقدمة ← ساعدنا ندعم بنكك</kbd>. تُخفى الأرقام والأسماء قبل الإرسال وتراجع النص بنفسك.</p>
+</section>
+
+<section class="card" id="home">
+<h2>٣. فهم الشاشة الرئيسية</h2>
+<ul>
+<li><b>مصروفك:</b> كل ما خرج من حساباتك هذا الشهر، ما عدا التحويلات بين حساباتك، والادخار، والسحب النقدي إذا كان الكاش مفعّلاً.</li>
+<li><b>دخلك:</b> ما دخل إليك من خارج حساباتك. الإيداع النقدي والتحويل من حسابك الآخر ليسا دخلاً.</li>
+<li><b>باقي الميزانية / باقي راتبك:</b> الخانة تقول من ماذا تحسب المتبقي. إن حددت ميزانية فالمتبقي منها، وإلا فمن راتبك، وإلا فمن دخل الشهر.</li>
+<li><b>يمكنك صرف … في اليوم:</b> المتبقي مقسوماً على الأيام الباقية حتى نهاية شهرك المالي.</li>
+<li><b>اشرح هذا الرقم:</b> زر تحت البطاقة يفكّك أي رقم إلى عملياته.</li>
+</ul>
+<div class="tip">تجاوزت الميزانية ولم تتجاوز راتبك؟ الشرح تحت البطاقة يذكر الحالتين معاً.</div>
+</section>
+
+<section class="card" id="cats">
+<h2>٤. التصنيفات</h2>
+<p>يصنّف التطبيق العمليات تلقائياً من اسم الجهة ونص الرسالة. افتح أي عملية لتغيير تصنيفها، وسيسألك: هذه العملية فقط، أم كل عمليات هذه الجهة؟ اختيار «الكل» يصنع قاعدة تسري على العمليات القادمة أيضاً.</p>
+<h3>تصنيفات خاصة</h3>
+<ul>
+<li><b>بين حساباتي:</b> حوالة من حسابك إلى حسابك الآخر. لا تُحسب مصروفاً ولا دخلاً. يكتشفها التطبيق تلقائياً، حتى لو أضاف البنك رسوماً، إذا كتبت صيغ اسمك في <kbd>الإعدادات ← أسماؤك في الحوالات</kbd>.</li>
+<li><b>أمانة (ليس مالي):</b> مبلغ مرّ بحسابك وليس لك، كمبلغ استلمته لصديق ثم حوّلته له. لا يُحسب دخلاً ولا مصروفاً، وتُحسب رسوم الحوالة فقط.</li>
+<li><b>المرتجعات:</b> مبلغ رجع لك عن شيء دفعته. افتح العملية الواردة واختر «استرداد من مصروف»، فيُخصم من مصروف ذلك التصنيف بدل أن يُحسب دخلاً.</li>
+<li><b>ادخار وذهب:</b> تحويل إلى حساب ادخار أو شراء ذهب. ليس مصروفاً.</li>
+</ul>
+<h3>تغيير اسم جهة</h3>
+<p>افتح العملية ← <kbd>تعديل البيانات</kbd> ← غيّر الاسم. خيار «في كل العمليات» يغيّر الاسم في القديمة والقادمة معاً، ويحتفظ بتصنيفها.</p>
+</section>
+
+<section class="card" id="cash">
+<h2>٥. الكاش والصراف</h2>
+<p>فعّل «الكاش الذي معك» من الرئيسية واكتب المبلغ الذي معك الآن. بعدها:</p>
+<ul>
+<li><b>السحب من الصراف</b> يُضاف إلى الكاش ولا يُحسب مصروفاً، حتى لا يُحسب مرتين.</li>
+<li><b>ما تصرفه نقداً</b> تسجّله من زر «صرفت كاش»، وهو المصروف الحقيقي.</li>
+<li><b>الإيداع النقدي</b> يُخصم من الكاش فقط إذا كان معك مبلغ يكفيه. وإلا يظهر مشطوباً، واضغطه إن كان من كاشك فعلاً.</li>
+<li>إذا صنّفت سحباً نقدياً بتصنيف آخر، مثل «عناية شخصية»، صار مصروفاً مباشراً ولم يدخل الكاش.</li>
+</ul>
+</section>
+
+<section class="card" id="balance">
+<h2>٦. الرصيد</h2>
+<p>التطبيق لا يتصل بالبنك. يحسب رصيد كل حساب هكذا: آخر رصيد معروف، إما ذكره البنك في رسالة وإما أدخلته أنت، ثم يضيف كل دخل بعده ويطرح كل صرف ورسومه.</p>
+<h3>لماذا يختلف عن تطبيق البنك؟</h3>
+<ul>
+<li><b>مبلغ محجوز</b> لم تصلك عنه رسالة بعد، أو فكّ حجز رجع للحساب بلا رسالة.</li>
+<li><b>شراء بعملة أجنبية</b> محسوب بالتقدير. اكتب المبلغ الذي خصمه البنك فعلاً في تفاصيل العملية.</li>
+<li><b>رصيد قديم</b> أدخلته قبل مدة. اضغط «رصيدك الآن» ← البنك ← اكتب الرصيد كما في تطبيق البنك.</li>
+</ul>
+<div class="tip">رصيد سالب في حساب جارٍ يعني أن مبلغاً دخل بلا رسالة. حدّث الرصيد من تطبيق البنك ويستأنف الحساب من الرقم الجديد.</div>
+</section>
+
+<section class="card" id="fx">
+<h2>٧. الشراء بعملة أجنبية</h2>
+<p>بعض البنوك ترسل الشراء الدولي بالعملة الأجنبية فقط. يحوّل التطبيق الدولار وعملات الخليج والدينار الأردني إلى الريال بسعرها الثابت، ويضيف رسوم الشراء الدولي التقديرية. يظهر المبلغ بعلامة <b>≈</b> مع المبلغ الأصلي في التفاصيل. اكتب المبلغ الفعلي من كشف البنك ليحلّ محل التقدير.</p>
+<p>العملات التي يتغير سعرها، كاليورو والجنيه، تبقى بعملتها حتى تكتب مبلغها بالريال.</p>
+</section>
+
+<section class="card" id="simple">
+<h2>٨. الوضع المبسّط</h2>
+<p>من <kbd>الإعدادات ← الوضع المبسّط</kbd>. تعرض الرئيسية كم صرفت، وكم تقدر تصرف في اليوم، والدخل والمتبقي، ورصيدك والكاش، وأكثر ثلاثة تصنيفات، وآخر ثلاث عمليات. الشريط السفلي فيه الرئيسية وزر الإضافة والإعدادات فقط. زر «عرض التفاصيل الكاملة» يعيد كل شيء.</p>
+<p>المستخدم الجديد يبدأ بالوضع المبسّط تلقائياً.</p>
+</section>
+
+<section class="card" id="backup">
+<h2>٩. النسخ الاحتياطي والنقل بين الأجهزة</h2>
+<p>البيانات محفوظة داخل جوالك فقط. من <kbd>الإعدادات ← النسخ الاحتياطي ← احفظ نسخة</kbd> تحصل على ملف يحوي العمليات والتصنيفات والأرصدة وكل الإعدادات. على الجهاز الجديد اختر <kbd>استعد نسختك وتخطَّ الإعداد</kbd> في أول شاشة.</p>
+<div class="tip">نسخة المتجر ونسخة التحميل المباشر تطبيقان مستقلان، لكل منهما بياناته. انقل بينهما بالنسخة الاحتياطية ولا تستخدمهما معاً.</div>
+</section>
+
+<section class="card" id="privacy">
+<h2>١٠. الخصوصية باختصار</h2>
+<ul>
+<li>لا يملك التطبيق صلاحية الاتصال بالإنترنت. لا يغادر جوالك شيء.</li>
+<li>يقرأ رسائل المرسلين الذين اخترتهم فقط، ويتجاهل رموز التحقق.</li>
+<li>تستطيع سحب إذن الرسائل أو حذف كل البيانات في أي وقت من الإعدادات.</li>
+<li>إرسال الملاحظات والعينات يتم من بريدك أنت، بعد أن تراجع النص وتُخفى منه الأرقام والأسماء.</li>
+</ul>
+<p>النص الكامل في <a href="/privacy/">سياسة الخصوصية</a>.</p>
+</section>
+
+<section class="card" id="faq">
+<h2>١١. أسئلة شائعة</h2>
+<details><summary>ظهرت عملية ليست حقيقية</summary><p>افتحها واضغط «ليست عملية حقيقية؟ احذفها». وإن كانت قراءة خاطئة لرسالة بنك، اضغط «القراءة خاطئة؟ أبلغنا» لتصلنا الصيغة ونصلحها.</p></details>
+<details><summary>مصروفي كبير وأنا لم أصرف هذا المبلغ</summary><p>ابحث في «مما يتكون مصروفك» عن حوالة إلى حسابك الآخر أو مبلغ أمانة، وصنّفها «بين حساباتي» أو «أمانة».</p></details>
+<details><summary>عملية بتاريخ الغد</summary><p>بعض البنوك تكتب تاريخاً خاطئاً في رسائل المساء. التطبيق يصحّحه تلقائياً من وقت وصول الرسالة.</p></details>
+<details><summary>الشاشة تهتز أثناء التمرير</summary><p>من <kbd>الإعدادات ← المظهر الزجاجي</kbd> اختر «متوقف». الوضع «تلقائي» يطفئه وحده على الأجهزة المتوسطة.</p></details>
+<details><summary>كيف أرسل ملاحظة؟</summary><p>من الرئيسية أو <kbd>الإعدادات ← أرسل ملاحظتك</kbd>. يفتح بريدك برسالة جاهزة إلى support@faed.app. أو شارك سؤالك في <a href="/forum/">المنتدى</a>.</p></details>
+</section>
+
+<footer>فائض · <a href="mailto:support@faed.app">support@faed.app</a> · <a href="/forum/">المنتدى</a> · <a href="/privacy/">الخصوصية</a> · <a href="/en/guides/" lang="en">English</a><br><span lang="en">Faed · on-device spending insights from your bank SMS</span></footer>
+</main>
+</body>
+</html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>فائض · الأدلة | Faed · Guides</title>
+<meta name="description" content="أدلة استخدام تطبيق فائض: البدء، البنوك، التصنيفات، الكاش، الأرصدة، النسخ الاحتياطي، والأسئلة الشائعة.">
+<link rel="alternate" hreflang="ar" href="https://faed.app/guides/">
+<link rel="alternate" hreflang="en" href="https://faed.app/en/guides/">
+<style>
+:root{--bg:#F3F6FB;--card:#fff;--ink:#0F172A;--mut:#57637A;--acc:#0B8F86;--line:#D5DEEA;--soft:#E6F4F2}
+@media (prefers-color-scheme:dark){:root{--bg:#070C1F;--card:#0E1730;--ink:#EEF1F8;--mut:#8A96B3;--acc:#2FD3C4;--line:#1C2A4D;--soft:#0F2A2A}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,"Noto Sans Arabic",Tahoma,sans-serif}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:22px;text-decoration:none;color:var(--ink)}.brand b{color:var(--acc)}
+nav.site{display:flex;gap:6px;flex-wrap:wrap}nav.site a{text-decoration:none;color:var(--mut);padding:8px 12px;border-radius:12px;border:1px solid var(--line);font-size:14px}nav.site a.on,nav.site a:hover{color:var(--acc);border-color:var(--acc)}
+nav.site a.lang{background:var(--soft);border-color:transparent;color:var(--acc);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:16px}
+h1{font-size:28px;margin:0 0 6px}h2{font-size:20px;margin:0 0 10px;color:var(--acc)}h3{font-size:16px;margin:16px 0 4px}
+p,li{color:var(--ink)}.mut{color:var(--mut);font-size:14px}ul,ol{padding-inline-start:22px;margin:6px 0}
+a{color:var(--acc)}
+.toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:8px}
+.toc a{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--ink);background:var(--bg)}
+.toc a span{display:block;color:var(--mut);font-size:12.5px}
+.tip{background:var(--soft);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:14.5px}
+kbd{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:1px 8px;font:inherit;font-size:14px}
+details{border-top:1px solid var(--line);padding:10px 0}details summary{cursor:pointer;font-weight:600}details:last-child{border-bottom:1px solid var(--line)}
+footer{color:var(--mut);font-size:13.5px;text-align:center;margin-top:24px}
+[lang=en]{direction:ltr;text-align:left}
 </style>
 </head>
 <body>
